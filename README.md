@@ -26,12 +26,12 @@ And in your application/target, add `"Cache"` to your `"dependencies"`.
 
 ## Usage
 
-`Cache` is accessed through a `CacheKey` type, so start by defining your keys.
+`Cache` is accessed through a `Cache.Key` type, so start by defining your keys.
 
 ```swift
-extension CacheKey where Value == String {
+extension Cache.Key where Value == String {
   // A key that stores a string value.
-  static let myKey = CacheKey("my_key")
+  static let myKey = Cache.Key("my_key")
 }
 
 ```
