@@ -6,15 +6,18 @@ import PackageDescription
 let package = Package(
   name: "Cache",
   products: [
-    .library(
-      name: "Cache",
-      targets: ["Cache"])
+    .library(name: "Cache", targets: ["Cache"])
   ],
-  dependencies: [],
+  dependencies: [
+    .package(url: "https://github.com/pointfreeco/xctest-dynamic-overlay", from: "0.2.1")
+  ],
   targets: [
     .target(
       name: "Cache",
-      dependencies: []),
+      dependencies: [
+        .product(name: "XCTestDynamicOverlay", package: "xctest-dynamic-overlay")
+      ]
+    ),
     .testTarget(
       name: "CacheTests",
       dependencies: ["Cache"]),

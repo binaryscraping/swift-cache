@@ -2,12 +2,12 @@ import XCTest
 
 @testable import Cache
 
-extension CacheKey where Value == Int {
-  static let counter = CacheKey(rawValue: "counter")
+extension Cache.Key where Value == Int {
+  static let counter = Self("counter")
 }
 
 final class CacheTests: XCTestCase {
-  func testLiveCache() throws {
+  func testNSCache() throws {
     let cache = Cache.live()
 
     cache.set(0, at: .counter)
