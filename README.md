@@ -1,4 +1,6 @@
 # swift-cache
+[![](https://img.shields.io/endpoint?url=https%3A%2F%2Fswiftpackageindex.com%2Fapi%2Fpackages%2Fbinaryscraping%2Fswift-cache%2Fbadge%3Ftype%3Dswift-versions)](https://swiftpackageindex.com/binaryscraping/swift-cache)
+[![](https://img.shields.io/endpoint?url=https%3A%2F%2Fswiftpackageindex.com%2Fapi%2Fpackages%2Fbinaryscraping%2Fswift-cache%2Fbadge%3Ftype%3Dplatforms)](https://swiftpackageindex.com/binaryscraping/swift-cache)
 
 A type-safe swifty wrapper around [`NSCache`](https://developer.apple.com/documentation/foundation/nscache).
 
