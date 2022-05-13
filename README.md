@@ -1,6 +1,6 @@
 # swift-cache
 
-A swifty wrapper around [`NSCache`](https://developer.apple.com/documentation/foundation/nscache).
+A type-safe swifty wrapper around [`NSCache`](https://developer.apple.com/documentation/foundation/nscache).
 
 
 ## Getting Started
