@@ -62,3 +62,37 @@ let value = cache.retrieve(at: .myKey)
 ```swift
 cache.remove(at: .myKey)
 ```
+
+### Usage in tests
+
+This library provides some helpers for easy usage on tests such as:
+
+#### Noop
+
+An implementation of `Cache` that does nothing when called.
+
+```swift
+let cache = Cache.noop
+```
+
+
+#### Failing
+
+An implementation of `Cache` that fails with an `XCTFail` call.
+
+```swift
+var setEntryCalled = false
+
+let cache = Cache.failing
+  .override(
+    setEntry: { entry, key in 
+      setEntryCalled = true
+    }
+  )
+  
+cache.set("string value", at: .myKey)
+  
+XCTAssertTrue(setEntryCalled)
+```
+
+At the code snipped above all calls to a method that wasn't overriden will terminate with a `XCTFail`.
